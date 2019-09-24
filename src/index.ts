@@ -1,3 +1,11 @@
-const a: number = 42;
+import { createStore } from 'redux';
+import rootReducer from './store';
+import { addClient } from './store/system/actions';
 
-console.log('the answer is', a);
+const store = createStore(rootReducer);
+
+console.log('initial state:', JSON.stringify(store.getState()));
+
+store.dispatch(addClient('foo'));
+
+console.log('new state:', JSON.stringify(store.getState()));
