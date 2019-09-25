@@ -7,7 +7,7 @@ Demonstrates a basic project structure for a NodeJS application that uses TypeSc
 ## Process followed to set this up
 ```
 npm init
-npm install --save-dev typescript tslint
+npm install --save-dev typescript tslint nodemon
 npm install redux
 npm install --save-dev @types/redux
 npx tslint --init
@@ -15,12 +15,15 @@ npx tslint --init
 
 Made some edits to package.json:
 ```
-"main": "dist/index.js"
+"main": "dist/app.js"
 ```
 and
 ```
- "scripts": {
-    "start": "tsc && node dist/index.js",
+"scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --ext ts --exec 'tsc && node dist/app.js'"
+  },
 ```
 
 Created a `tsconfig.json` file:
@@ -39,5 +42,4 @@ Created a `tsconfig.json` file:
   ```
 
   ### Still to do
-  * Add watch/reload for development
   * Add unit testing
