@@ -7,4 +7,6 @@ const rootReducer = combineReducers({
 
 export type AppState = ReturnType<typeof rootReducer>
 
-export default rootReducer;
+const store = createStore(rootReducer);
+
+export default store;

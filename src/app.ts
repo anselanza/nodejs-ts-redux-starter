@@ -1,8 +1,5 @@
-import { createStore } from 'redux';
-import rootReducer from './store';
+import store from './store';
 import { addClient } from './store/system/actions';
-
-const store = createStore(rootReducer);
 
 console.log('initial state:', JSON.stringify(store.getState()));
 
