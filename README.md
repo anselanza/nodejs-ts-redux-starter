@@ -37,3 +37,7 @@ Created a `tsconfig.json` file:
     "lib": ["es2015"]
   }
   ```
+
+  ### Still to do
+  * Add watch/reload for development
+  * Add unit testing
