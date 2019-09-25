@@ -4,7 +4,7 @@
 ## Overview
 Demonstrates a basic project structure for a NodeJS application that uses TypeScript and Redux.
 
-## Process followed to set thihs up
+## Process followed to set this up
 ```
 npm init
 npm install --save-dev typescript tslint
